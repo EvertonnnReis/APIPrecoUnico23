@@ -42,8 +42,9 @@ namespace APIPrecoUnico23.Services
                                    LISTAPRECO = 'LISTA DE PRECO B2W SP'
                         FROM CONNECTPARTS.DBO.PRECIFICACOES
                         WHERE DataEnvioAtualizacao IS NULL 
-                              AND DATACONFIRMACAO >= '2023-06-19'
+                              AND DATACONFIRMACAO >= '2023-06-21'
                               AND PRODUTOLISTAPRECOCODIGO = 23
+                              AND APROVADO = 1
                         ORDER BY DATACONFIRMACAO ASC";
 
                     cmd.Parameters.AddWithValue("@Interface", _interface);
@@ -188,7 +189,7 @@ namespace APIPrecoUnico23.Services
                     cmd.CommandText = $"UPDATE Precificacoes " +
                         $"SET DataEnvioAtualizacao = GETDATE() " +
                         $"WHERE PRODUTOCODIGOEXTERNO IN ({listaSkuFormatada}) AND ProdutoListaPrecoCodigo = 23 " +
-                        $"AND DataConfirmacao >= '2023-06-19' ";
+                        $"AND DataConfirmacao >= '2023-06-21' ";
 
                     await cmd.ExecuteNonQueryAsync();
                 }
