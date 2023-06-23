@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="API_PRECO_LISTA_23" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\CONNECT_PROJETOS\\APIPrecoUnico23\\APIPrecoUnico23\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
