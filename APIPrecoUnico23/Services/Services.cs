@@ -205,7 +205,7 @@ namespace APIPrecoUnico23.Services
                     cmd.Connection = conn;
                     cmd.CommandText = $"UPDATE Precificacoes " +
                         $"SET DataEnvioAtualizacao = GETDATE() " +
-                        $"WHERE PRODUTOCODIGOEXTERNO IN ({listaSkuFormatada}) AND ProdutoListaPrecoCodigo = 22 " +
+                        $"WHERE PRODUTOCODIGOEXTERNO IN ({listaSkuFormatada}) AND ProdutoListaPrecoCodigo = 23 " +
                         $"AND DataConfirmacao >= '2023-06-21' ";
 
                     await cmd.ExecuteNonQueryAsync();
